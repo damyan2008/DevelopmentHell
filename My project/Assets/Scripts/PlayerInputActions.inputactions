@@ -93,6 +93,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Journal",
+            "id": "1f4596d7-9b74-43de-9064-5e3cc15e2f61",
+            "actions": [
+                {
+                    "name": "JournalOpen/Close",
+                    "type": "Button",
+                    "id": "c705d765-ee68-466c-94b2-832d2a5d5e98",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "2d67df9a-61a3-4fd7-8785-a85082955418",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JournalOpen/Close",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
