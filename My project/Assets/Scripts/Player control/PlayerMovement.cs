@@ -107,6 +107,10 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetBool("IsMovingLeft", movingLeft);
 
+        bool movingRight = rb.linearVelocity.x > 0;
+
+        animator.SetBool("IsMovingRight", movingRight);
+
         // Start/continue charging only while grounded
         if (grounded && jumpHeld)
         {
