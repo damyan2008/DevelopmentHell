@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject visual;
     [Header("Animation (Optional)")]
-    [SerializeField] private Animator animator;
 
     [SerializeField] private string animMoveBool = "IsMoving";
     [SerializeField] private string animChargeBool = "IsChargingJump";
@@ -93,8 +92,6 @@ public class PlayerMovement : MonoBehaviour
         progMan = ProgressionHandler.Instance;
         defaultGravityScale = rb.gravityScale;
 
-        if (animator == null)
-        animator = GetComponentInChildren<Animator>();
 
         CacheVisualCrouchData();
     }
@@ -124,6 +121,8 @@ public class PlayerMovement : MonoBehaviour
             );
         }
 
+        Debug.Log(rb.linearVelocity.x);
+
         bool movingLeft = rb.linearVelocity.x < 0;
 
         animator.SetBool("IsMovingLeft", movingLeft);
@@ -148,14 +147,14 @@ public class PlayerMovement : MonoBehaviour
 
         ApplyJumpGravityTuning(grounded);
         ApplyCrouchVisual();
-        UpdateAnimatorState(grounded);
+        //UpdateAnimatorState(grounded);
     }
 
     private void FixedUpdate()
     {
         //Debug.Log(progMan.HasHeldItem);
-        float moveMult = (isCharging ? chargeMoveMultiplier : 1f);
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed * moveMult, rb.linearVelocity.y);
+        //float moveMult = (isCharging ? chargeMoveMultiplier : 1f);
+        //rb.linearVelocity = new Vector2(moveInput.x * moveSpeed * moveMult, rb.linearVelocity.y);
     }
 
     private void PerformChargedJump()
@@ -316,7 +315,7 @@ public class PlayerMovement : MonoBehaviour
         float target = canCrouchNow ? 1f : 0f;
         crouchFactor = Mathf.MoveTowards(crouchFactor, target, crouchTransitionSpeed * Time.deltaTime);
 
-        float yMult = Mathf.Lerp(1f, crouchScaleY, crouchFactor);
+        /*float yMult = Mathf.Lerp(1f, crouchScaleY, crouchFactor);
 
         Transform vt = visual.transform;
         vt.localScale = new Vector3(visualBaseLocalScale.x, visualBaseLocalScale.y * yMult, visualBaseLocalScale.z);
@@ -338,9 +337,9 @@ public class PlayerMovement : MonoBehaviour
         {
             // Fallback: if no renderer is found, at least preserve original position.
             vt.localPosition = visualBaseLocalPos;
-        }
+        }*/
     }
-    private void SetAnimBool(string param, bool value)
+    /*private void SetAnimBool(string param, bool value)
     {
         if (animator == null || string.IsNullOrEmpty(param)) return;
         animator.SetBool(param, value);
@@ -352,7 +351,7 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat(param, value);
     }
 
-    private void UpdateAnimatorState(bool grounded)
+    /*private void UpdateAnimatorState(bool grounded)
     {
         // Moving = horizontal input (or velocity if you prefer)
         bool isMoving = Mathf.Abs(moveInput.x) > 0.01f;
@@ -375,7 +374,7 @@ public class PlayerMovement : MonoBehaviour
         SetAnimFloat(animMoveXFloat, Mathf.Abs(moveInput.x));
         SetAnimFloat(animVerticalSpeedFloat, rb != null ? rb.linearVelocity.y : 0f);
         SetAnimFloat(animCharge01Float, charge01);
-    }
+    }*/
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
