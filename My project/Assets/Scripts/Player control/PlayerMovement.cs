@@ -44,6 +44,18 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameObject visual;
+    [Header("Animation (Optional)")]
+    [SerializeField] private Animator animator;
+
+    [SerializeField] private string animMoveBool = "IsMoving";
+    [SerializeField] private string animChargeBool = "IsChargingJump";
+    [SerializeField] private string animJumpBool = "IsJumping";
+    [SerializeField] private string animCrouchBool = "IsCrouching";
+
+    // Optional extras (safe to leave unused in Animator)
+    [SerializeField] private string animMoveXFloat = "MoveX";
+    [SerializeField] private string animVerticalSpeedFloat = "VerticalSpeed";
+    [SerializeField] private string animCharge01Float = "JumpCharge01";
      public Rigidbody2D rb;
     private ProgressionHandler progMan;
 
@@ -55,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
     // Charge state
     private bool isCharging;
     private float chargeTime;
+    private bool _jumpHeld;
+    private bool _crouchHeld;
 
     private float defaultGravityScale;
 
@@ -79,7 +93,14 @@ public class PlayerMovement : MonoBehaviour
         progMan = ProgressionHandler.Instance;
         defaultGravityScale = rb.gravityScale;
 
+        if (animator == null)
+        animator = GetComponentInChildren<Animator>();
+
         CacheVisualCrouchData();
+    }
+    private void Start()
+    {
+        if(!progMan) progMan = ProgressionHandler.Instance;
     }
 
     private void Update()
@@ -127,6 +148,7 @@ public class PlayerMovement : MonoBehaviour
 
         ApplyJumpGravityTuning(grounded);
         ApplyCrouchVisual();
+        UpdateAnimatorState(grounded);
     }
 
     private void FixedUpdate()
@@ -197,9 +219,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext ctx)
     {
-        //Debug.Log(keyMan.IsUnlocked(PlayerAction.Jump));
-        //if (!keyMan.IsUnlocked(PlayerAction.Jump)) return;
-        //Debug.Log(progMan.HasUpgrade(PlayerAction.Jump));
+        
         if(!progMan.HasUpgrade(PlayerAction.Jump)) return;
 
         // Hold begins
@@ -301,8 +321,6 @@ public class PlayerMovement : MonoBehaviour
         Transform vt = visual.transform;
         vt.localScale = new Vector3(visualBaseLocalScale.x, visualBaseLocalScale.y * yMult, visualBaseLocalScale.z);
 
-        // Keep the bottom anchored by shifting the visual downward by half the removed height.
-        // Convert the world-unit delta into local units (approx) via parent lossyScale.
         if (visualBaseHeightWorld > 0f)
         {
             float removedHeightWorld = visualBaseHeightWorld * (1f - yMult);
@@ -321,6 +339,42 @@ public class PlayerMovement : MonoBehaviour
             // Fallback: if no renderer is found, at least preserve original position.
             vt.localPosition = visualBaseLocalPos;
         }
+    }
+    private void SetAnimBool(string param, bool value)
+    {
+        if (animator == null || string.IsNullOrEmpty(param)) return;
+        animator.SetBool(param, value);
+    }
+
+    private void SetAnimFloat(string param, float value)
+    {
+        if (animator == null || string.IsNullOrEmpty(param)) return;
+        animator.SetFloat(param, value);
+    }
+
+    private void UpdateAnimatorState(bool grounded)
+    {
+        // Moving = horizontal input (or velocity if you prefer)
+        bool isMoving = Mathf.Abs(moveInput.x) > 0.01f;
+
+        // Crouch state (actual crouch, not just button held)
+        bool isCrouchingNow = crouchHeld && grounded;
+
+        // Jumping = airborne
+        bool isJumping = !grounded;
+
+        // Charge normalized 0..1
+        float charge01 = (maxChargeTime <= 0f) ? 1f : Mathf.Clamp01(chargeTime / maxChargeTime);
+
+        SetAnimBool(animMoveBool, isMoving);
+        SetAnimBool(animChargeBool, isCharging);
+        SetAnimBool(animJumpBool, isJumping);
+        SetAnimBool(animCrouchBool, isCrouchingNow);
+
+        // Optional floats
+        SetAnimFloat(animMoveXFloat, Mathf.Abs(moveInput.x));
+        SetAnimFloat(animVerticalSpeedFloat, rb != null ? rb.linearVelocity.y : 0f);
+        SetAnimFloat(animCharge01Float, charge01);
     }
 
 #if UNITY_EDITOR
