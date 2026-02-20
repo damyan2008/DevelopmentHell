@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             );
         }
 
-        Debug.Log(rb.linearVelocity.x);
+        //Debug.Log(rb.linearVelocity.x);
 
         bool movingLeft = rb.linearVelocity.x < 0;
 
