@@ -32,7 +32,7 @@ public class JournalPopUp : MonoBehaviour
             {
                 journalAnimator.SetTrigger("Open");
             }
-            
+            //yield return new WaitForSecondsRealtime(0.5f);
             journalInputField.ActivateInputField();
             Time.timeScale = 0f;
         }

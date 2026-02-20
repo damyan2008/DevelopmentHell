@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 7635ef25cd422b146b76a4f7dc6eed25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -447060092669537525
+    second: mrfuraWHOLEsheetBETAMk1_0
+  - first:
+      213: -2469986209808010066
+    second: mrfuraWHOLEsheetBETAMk1_1
+  - first:
+      213: -7839639456993248350
+    second: mrfuraWHOLEsheetBETAMk1_2
+  - first:
+      213: 1877696723123497682
+    second: mrfuraWHOLEsheetBETAMk1_3
+  - first:
+      213: -8529517072123620320
+    second: mrfuraWHOLEsheetBETAMk1_4
+  - first:
+      213: -8639339656637400114
+    second: mrfuraWHOLEsheetBETAMk1_5
+  - first:
+      213: -5160373180986680213
+    second: mrfuraWHOLEsheetBETAMk1_6
+  - first:
+      213: -8797385351137302688
+    second: mrfuraWHOLEsheetBETAMk1_7
+  - first:
+      213: 428221622465846039
+    second: mrfuraWHOLEsheetBETAMk1_8
+  - first:
+      213: 3188659870897600008
+    second: mrfuraWHOLEsheetBETAMk1_9
+  - first:
+      213: 4137234328578932776
+    second: mrfuraWHOLEsheetBETAMk1_10
+  - first:
+      213: 5938994818708514120
+    second: mrfuraWHOLEsheetBETAMk1_11
+  - first:
+      213: -2704945748454737679
+    second: mrfuraWHOLEsheetBETAMk1_12
+  - first:
+      213: -970310090742755906
+    second: mrfuraWHOLEsheetBETAMk1_13
+  - first:
+      213: 1157001322457569827
+    second: mrfuraWHOLEsheetBETAMk1_14
+  - first:
+      213: -6978424487010383491
+    second: mrfuraWHOLEsheetBETAMk1_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 385
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03dd2fd639bbc9f0800000000000000
+      internalID: -447060092669537525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 385
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4b744f0a8d8bdd0800000000000000
+      internalID: -2469986209808010066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_2
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 385
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abf7c63371043390800000000000000
+      internalID: -7839639456993248350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_3
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 385
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dae0b1a83bee0a10800000000000000
+      internalID: 1877696723123497682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 261
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024117a0a6111a980800000000000000
+      internalID: -8529517072123620320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_5
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 261
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecbbe200b56ea1880800000000000000
+      internalID: -8639339656637400114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_6
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 261
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6c16d6ceeba268b0800000000000000
+      internalID: -5160373180986680213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 261
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0676c3932a869e580800000000000000
+      internalID: -8797385351137302688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 133
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71bd73cfb4951f500800000000000000
+      internalID: 428221622465846039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_9
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 129
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806f4622245604c20800000000000000
+      internalID: 3188659870897600008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_10
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 129
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 820cf7ba3b86a6930800000000000000
+      internalID: 4137234328578932776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_11
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 129
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 845a10c425c8b6250800000000000000
+      internalID: 5938994818708514120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_12
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f8f6a65c2a167ad0800000000000000
+      internalID: -2704945748454737679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_13
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd0d470d14c882f0800000000000000
+      internalID: -970310090742755906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_14
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a9dbd929e7e0010800000000000000
+      internalID: 1157001322457569827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mrfuraWHOLEsheetBETAMk1_15
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79cbdff6e7a72f90800000000000000
+      internalID: -6978424487010383491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5b8debc5732956b45a0b67735eddade5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mrfuraWHOLEsheetBETAMk1_0: -447060092669537525
+      mrfuraWHOLEsheetBETAMk1_1: -2469986209808010066
+      mrfuraWHOLEsheetBETAMk1_10: 4137234328578932776
+      mrfuraWHOLEsheetBETAMk1_11: 5938994818708514120
+      mrfuraWHOLEsheetBETAMk1_12: -2704945748454737679
+      mrfuraWHOLEsheetBETAMk1_13: -970310090742755906
+      mrfuraWHOLEsheetBETAMk1_14: 1157001322457569827
+      mrfuraWHOLEsheetBETAMk1_15: -6978424487010383491
+      mrfuraWHOLEsheetBETAMk1_2: -7839639456993248350
+      mrfuraWHOLEsheetBETAMk1_3: 1877696723123497682
+      mrfuraWHOLEsheetBETAMk1_4: -8529517072123620320
+      mrfuraWHOLEsheetBETAMk1_5: -8639339656637400114
+      mrfuraWHOLEsheetBETAMk1_6: -5160373180986680213
+      mrfuraWHOLEsheetBETAMk1_7: -8797385351137302688
+      mrfuraWHOLEsheetBETAMk1_8: 428221622465846039
+      mrfuraWHOLEsheetBETAMk1_9: 3188659870897600008
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

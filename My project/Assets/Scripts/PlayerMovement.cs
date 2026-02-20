@@ -3,8 +3,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("LeftAccAnim")]
+    [SerializeField] private Animator animator;
+    
+
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 8f;
+    [SerializeField] private float acceleration = 20f;
+    [SerializeField] private float deceleration = 40f;
 
     [Header("Charged Jump")]
     [Tooltip("Minimum jump height (world units) when you tap/release quickly.")]
@@ -81,6 +87,27 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         bool grounded = IsGrounded();
+
+         if (moveInput.x != 0)
+        {
+            // Accelerate
+            rb.linearVelocity = new Vector2(
+                Mathf.MoveTowards(rb.linearVelocity.x, moveInput.x * moveSpeed, acceleration * Time.fixedDeltaTime),
+                rb.linearVelocity.y
+            );
+        }
+        else
+        {
+            // Decelerate to 0
+            rb.linearVelocity = new Vector2(
+                Mathf.MoveTowards(rb.linearVelocity.x, 0, deceleration * Time.fixedDeltaTime),
+                rb.linearVelocity.y
+            );
+        }
+
+        bool movingLeft = rb.linearVelocity.x < 0;
+
+        animator.SetBool("IsMovingLeft", movingLeft);
 
         // Start/continue charging only while grounded
         if (grounded && jumpHeld)
