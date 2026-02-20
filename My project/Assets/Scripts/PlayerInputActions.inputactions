@@ -121,6 +121,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Eyes",
+            "id": "a496f03a-0197-4805-bb2a-71f130a53f68",
+            "actions": [
+                {
+                    "name": "EyesToggle",
+                    "type": "Button",
+                    "id": "f43e67f1-e482-4164-b834-2cb1404174a4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9c8f5790-38d8-4a53-8266-a8cca7ac1dc7",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EyesToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
