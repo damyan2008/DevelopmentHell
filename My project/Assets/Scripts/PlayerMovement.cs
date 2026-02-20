@@ -16,14 +16,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     [SerializeField] private LayerMask groundLayer;
 
-    private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D rb;
     private Vector2 moveInput;
     private bool jumpPressed;
     private bool jumpHeld;
 
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -45,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+        Debug.Log(IsGrounded());
     }
 
     private bool IsGrounded()
