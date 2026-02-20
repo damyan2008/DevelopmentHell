@@ -124,8 +124,8 @@ TextureImporter:
       name: Scroll-Sheet_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 574
+        x: 10
+        y: 573
         width: 229
         height: 148
       alignment: 0
@@ -146,9 +146,9 @@ TextureImporter:
       name: Scroll-Sheet_1
       rect:
         serializedVersion: 2
-        x: 270
+        x: 266
         y: 574
-        width: 216
+        width: 229
         height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -168,13 +168,13 @@ TextureImporter:
       name: Scroll-Sheet_2
       rect:
         serializedVersion: 2
-        x: 436
-        y: 568
-        width: 301
-        height: 159
+        x: 522
+        y: 574
+        width: 229
+        height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 88, y: 0, z: 0, w: 7}
+      border: {x: 0, y: 0, z: 0, w: 1}
       customData: 
       outline: []
       physicsShape: []
@@ -190,9 +190,9 @@ TextureImporter:
       name: Scroll-Sheet_3
       rect:
         serializedVersion: 2
-        x: 15
-        y: 317
-        width: 193
+        x: 12
+        y: 318
+        width: 229
         height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -212,10 +212,10 @@ TextureImporter:
       name: Scroll-Sheet_4
       rect:
         serializedVersion: 2
-        x: 270
-        y: 317
-        width: 165
-        height: 150
+        x: 266
+        y: 321
+        width: 229
+        height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: Scroll-Sheet_5
       rect:
         serializedVersion: 2
-        x: 523
-        y: 316
-        width: 139
-        height: 150
+        x: 524
+        y: 318
+        width: 229
+        height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -258,7 +258,7 @@ TextureImporter:
         serializedVersion: 2
         x: 14
         y: 61
-        width: 112
+        width: 229
         height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -280,8 +280,8 @@ TextureImporter:
         serializedVersion: 2
         x: 266
         y: 61
-        width: 88
-        height: 149
+        width: 229
+        height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

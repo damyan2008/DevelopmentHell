@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0010070801, y: 0.0002593994}
-  m_SizeDelta: {x: -0.0019531, y: 0.00048828}
+  m_AnchoredPosition: {x: 0.000091552734, y: 0.0002593994}
+  m_SizeDelta: {x: -0.000061035, y: 0.0005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &295861631
 MonoBehaviour:
@@ -450,8 +450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.2471, y: 0}
-  m_SizeDelta: {x: 875.2125, y: 354.8459}
+  m_AnchoredPosition: {x: -0.6527, y: 9.6663}
+  m_SizeDelta: {x: 563.9562, y: 347.1127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400962562
 MonoBehaviour:
@@ -629,8 +629,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -8.783813, y: -7.6479034}
-  m_SizeDelta: {x: -91.2599, y: -74.7174}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -394.7833, y: -74.7174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401378175
 MonoBehaviour:
@@ -667,8 +667,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2063687834043970181, guid: 2283bd9b458343346b667bd8b892bb18, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -693,7 +693,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401378173}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4d208c6849290b848a5e344cbe999ec1, type: 2}
   m_CullingMode: 0
@@ -773,8 +773,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4280024832
+  m_fontColor: {r: 0, g: 1, b: 0.10412741, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -879,8 +879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11354604, y: 0}
   m_AnchorMax: {x: 1, y: 0.76500005}
-  m_AnchoredPosition: {x: -44.64743, y: 47.7697}
-  m_SizeDelta: {x: -12.335, y: -3.8028}
+  m_AnchoredPosition: {x: -48.514, y: 37.1367}
+  m_SizeDelta: {x: 61.1292, y: 25.1962}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585463848
 MonoBehaviour:
@@ -1127,6 +1127,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: c705d765-ee68-466c-94b2-832d2a5d5e98
     m_ActionName: 'Journal/JournalOpen/Close[/Keyboard/j]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3af15032-21c4-45da-98c8-f73e06eecf72
+    m_ActionName: 'Player/Crouch[/Keyboard/f]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e27d4f90-f9af-46d3-a591-5d57c82d68b8
+    m_ActionName: 'Player/Grab[/Keyboard/h]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Journal
