@@ -38,8 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("References")]
     [SerializeField] private GameObject visual;
-
-    private Rigidbody2D rb;
+     public Rigidbody2D rb;
     private KeybindUnlockManager keyMan;
     private ProgressionHandler progMan;
 
