@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 912b7160951029d428c46ab201a8dda0
+guid: 94df96dc3c959f649a5628b1837cb005
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1863322360520124471
-    second: mrfurnaDEMO_0
-  - first:
-      213: -4102624341131751351
-    second: mrfurnaDEMO_1
+      213: -8632807521500629345
+    second: Shadows_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,9 +40,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mrfurnaDEMO_0
+      name: Shadows_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 5
-        width: 90
-        height: 122
+        x: 0
+        y: 0
+        width: 256
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73828d880d9dbd910800000000000000
-      internalID: 1863322360520124471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mrfurnaDEMO_1
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 5
-        width: 90
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94098fbf5ec8017c0800000000000000
-      internalID: -4102624341131751351
+      spriteID: f9672aa3c4b123880800000000000000
+      internalID: -8632807521500629345
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mrfurnaDEMO_0: 1863322360520124471
-      mrfurnaDEMO_1: -4102624341131751351
+      Shadows_0: -8632807521500629345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

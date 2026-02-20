@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 912b7160951029d428c46ab201a8dda0
+guid: 365dc0652bf05ea43a971add5d3a38ef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1863322360520124471
-    second: mrfurnaDEMO_0
+      213: -8078966772632430244
+    second: Buildings_0
   - first:
-      213: -4102624341131751351
-    second: mrfurnaDEMO_1
+      213: -3985759516408998331
+    second: Buildings_1
+  - first:
+      213: -7011020414044352858
+    second: Buildings_2
+  - first:
+      213: -5075879681021990956
+    second: Buildings_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -43,9 +49,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -116,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mrfurnaDEMO_0
+      name: Buildings_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 5
-        width: 90
-        height: 122
+        x: 2
+        y: 0
+        width: 38
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73828d880d9dbd910800000000000000
-      internalID: 1863322360520124471
+      spriteID: c595f05468eb1ef80800000000000000
+      internalID: -8078966772632430244
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mrfurnaDEMO_1
+      name: Buildings_1
       rect:
         serializedVersion: 2
-        x: 152
-        y: 5
-        width: 90
-        height: 122
+        x: 42
+        y: 0
+        width: 58
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,8 +159,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94098fbf5ec8017c0800000000000000
-      internalID: -4102624341131751351
+      spriteID: 5461f4856dcbfa8c0800000000000000
+      internalID: -3985759516408998331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 0
+        width: 88
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aecfd3541ad3be90800000000000000
+      internalID: -7011020414044352858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buildings_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 0
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d7af02c25ade89b0800000000000000
+      internalID: -5075879681021990956
       vertices: []
       indices: 
       edges: []
@@ -173,8 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mrfurnaDEMO_0: 1863322360520124471
-      mrfurnaDEMO_1: -4102624341131751351
+      Buildings_0: -8078966772632430244
+      Buildings_1: -3985759516408998331
+      Buildings_2: -7011020414044352858
+      Buildings_3: -5075879681021990956
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

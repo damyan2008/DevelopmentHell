@@ -119,6 +119,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &9796657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9796659}
+  - component: {fileID: 9796658}
+  m_Layer: 0
+  m_Name: ProgressionHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &9796658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9796657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d21e3a6b376ba4dacc03787d4dfa61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProgressionHandler
+--- !u!4 &9796659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9796657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01978, y: -0, z: 13.60071}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &15200839
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +438,7 @@ MonoBehaviour:
   minJumpHeight: 2
   maxJumpHeight: 4
   maxChargeTime: 2
+  minChargeFractionToJump: 0.33
   chargeMoveMultiplier: 1
   jumpHangVelocityThreshold: 1
   jumpHangGravityMultiplier: 0.5
@@ -404,6 +449,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   visual: {fileID: 37947269}
+  rb: {fileID: 0}
   crouchScaleY: 0.55
   crouchTransitionSpeed: 14
 --- !u!212 &210961511
@@ -1388,3 +1434,4 @@ SceneRoots:
   - {fileID: 1442480865}
   - {fileID: 578849921}
   - {fileID: 508507486834910763}
+  - {fileID: 9796659}

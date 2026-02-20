@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 912b7160951029d428c46ab201a8dda0
+guid: a9401239bb4fde7468a07f38fddaa337
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1863322360520124471
-    second: mrfurnaDEMO_0
-  - first:
-      213: -4102624341131751351
-    second: mrfurnaDEMO_1
+      213: -5960807248038239785
+    second: istockphoto-1466294997-612x612-removebg-preview_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mrfurnaDEMO_0
+      name: istockphoto-1466294997-612x612-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 5
-        width: 90
-        height: 122
+        x: 80
+        y: 80
+        width: 340
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73828d880d9dbd910800000000000000
-      internalID: 1863322360520124471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mrfurnaDEMO_1
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 5
-        width: 90
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 94098fbf5ec8017c0800000000000000
-      internalID: -4102624341131751351
+      spriteID: 7d16b1eb365f64da0800000000000000
+      internalID: -5960807248038239785
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mrfurnaDEMO_0: 1863322360520124471
-      mrfurnaDEMO_1: -4102624341131751351
+      istockphoto-1466294997-612x612-removebg-preview_0: -5960807248038239785
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
