@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject visual;
      public Rigidbody2D rb;
-    private KeybindUnlockManager keyMan;
     private ProgressionHandler progMan;
 
     private Vector2 moveInput;
@@ -77,7 +76,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        keyMan = KeybindUnlockManager.Instance;
         progMan = ProgressionHandler.Instance;
         defaultGravityScale = rb.gravityScale;
 
