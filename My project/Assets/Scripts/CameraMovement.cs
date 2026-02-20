@@ -35,9 +35,7 @@ public class CameraMovement : MonoBehaviour
                     smoothSpeed=-4f;
                 }
             }*/
-            Debug.Log("smoothSpeed: "+smoothSpeed);
-            Debug.Log("thresholdX: "+thresholdX);
-            Debug.Log("deltaTime: "+Time.deltaTime);
+            
             //float newX = Mathf.Lerp(transform.position.x, target.position.x, smoothSpeed);
             transform.position = new Vector3(transform.position.x+(smoothSpeed*smoothAcc*Time.deltaTime), transform.position.y, transform.position.z);
         }
