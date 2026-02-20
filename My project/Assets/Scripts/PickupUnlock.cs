@@ -1,38 +1,32 @@
-// UnlockPickup.cs
+// UpgradePickup.cs
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class UnlockPickup : MonoBehaviour
+public class UpgradePickup : MonoBehaviour
 {
-    [SerializeField] private PlayerAction unlocksAction = PlayerAction.Jump;
+    [SerializeField] private PlayerAction upgrade = PlayerAction.Jump;
     [SerializeField] private bool destroyOnPickup = true;
 
     private void Reset()
     {
-        // Ensure trigger for pickup behavior
-        var c = GetComponent<Collider2D>();
-        c.isTrigger = true;
+        GetComponent<Collider2D>().isTrigger = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        // Keep it simple: tag check. Swap for a Player component check if you prefer.
-        if (!other.CompareTag("Player"))
-            return;
+        if (!other.CompareTag("Player")) return;
 
-        var mgr = KeybindUnlockManager.Instance;
-        if (mgr == null)
+        var handler = ProgressionHandler.Instance;
+        if (handler == null)
         {
-            Debug.LogError("No KeybindUnlockManager in scene.");
+            Debug.LogError("No ProgressionHandler in scene.");
             return;
         }
-        Debug.Log("Coll");
 
-        mgr.Unlock(unlocksAction);
-        Debug.Log("Jumpy");
+        bool newlyUnlocked = handler.UnlockUpgrade(upgrade);
 
-        if (destroyOnPickup)
+        // If you want pickups to disappear even if already unlocked, remove the if.
+        if (newlyUnlocked && destroyOnPickup)
             Destroy(gameObject);
     }
 }

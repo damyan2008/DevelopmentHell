@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19bf303f268ff3747bec3d6a7388a86f, type: 3}
+  m_Name: ItemDB
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDropDatabase
+  entries:
+  - itemId: 0
+    pickupPrefab: {fileID: 6678624166024899025, guid: 4ce68afc062d3674a8d7a54eae66ef86, type: 3}
