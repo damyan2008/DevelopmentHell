@@ -50,8 +50,9 @@ public class JournalPopUp : MonoBehaviour
 
             journalInputField.text = journalInputField.text; 
             journalInputField.DeactivateInputField();
+            journalPanel.SetActive(false);
             
-            StartCoroutine(DisableAfterAnimation());
+            //StartCoroutine(DisableAfterAnimation());
         }
     }
 
