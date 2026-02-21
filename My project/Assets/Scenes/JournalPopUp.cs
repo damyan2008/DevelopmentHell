@@ -5,13 +5,17 @@ using TMPro;
 
 public class JournalPopUp : MonoBehaviour
 {
-    public GameObject journalPanel;
-    public TMP_InputField journalInputField; 
+   public GameObject journalPanel;
+    // 1. CHANGED: Now uses the Text component instead of an Input Field
+    public TextMeshProUGUI journalTextDisplay; 
+    
+    // 2. ADDED: Reference to handle the Action Map switch for the Esc key
+    public PlayerInput playerInput;
+
     private bool isJournalOpen = false;
 
     public void OnJournalToggle(InputAction.CallbackContext context)
     {
-        // Only fire when the key is pressed down
         if (context.performed)
         {
             ToggleJournal();
@@ -24,28 +28,31 @@ public class JournalPopUp : MonoBehaviour
 
         if (isJournalOpen)
         {
-            // 1. Show the panel
             journalPanel.SetActive(true);
-            
-            // 2. Select the text box for instant typing
-            journalInputField.ActivateInputField();
-            
-            // 3. Pause the game
             Time.timeScale = 0f; 
+
+            // 3. SWITCH MAP: This makes the "Esc" key in your Journal map start working
+            if (playerInput != null) 
+                playerInput.SwitchCurrentActionMap("Journal");
         }
         else
         {
-            // 1. Force the text box to 'save' its current string if you clicked away
-            journalInputField.text = journalInputField.text; 
-            
-            // 2. Stop the blinking cursor and exit "edit mode"
-            journalInputField.DeactivateInputField();
-            
-            // 3. Hide the panel
             journalPanel.SetActive(false);
-            
-            // 4. UN-PAUSE THE GAME (This is what you were missing!)
             Time.timeScale = 1f; 
+
+            // 4. SWITCH BACK: This enables your Player map again
+            if (playerInput != null) 
+                playerInput.SwitchCurrentActionMap("Player");
+        }
+    }
+
+    // --- 5. THE "ON COMMAND" FUNCTION ---
+    // Call this from other scripts or buttons to add text
+    public void AddText(string newEntry)
+    {
+        if (journalTextDisplay != null)
+        {
+            journalTextDisplay.text += "\n" + "- " + newEntry;
         }
     }
 }
