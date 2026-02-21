@@ -7,6 +7,8 @@ public class UpgradePickup : MonoBehaviour
     [SerializeField] private PlayerAction upgrade = PlayerAction.Jump;
     [SerializeField] private bool destroyOnPickup = true;
 
+    private JournalPopUp journalPopUp;
+
     private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;
@@ -15,6 +17,10 @@ public class UpgradePickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
+        
+        
+
+        journalPopUp.AddText(@"The internal connection to the right track movement is binded to 'D';");
 
         var handler = ProgressionHandler.Instance;
         if (handler == null)
