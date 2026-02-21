@@ -19,6 +19,7 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         if (target == null) return;
+        float smoothSpeedY = target.position.y-(transform.position.y-2);
 
         if (Mathf.Abs(transform.position.x - target.position.x) >= thresholdX)
         {
@@ -37,7 +38,7 @@ public class CameraMovement : MonoBehaviour
             }*/
             
             //float newX = Mathf.Lerp(transform.position.x, target.position.x, smoothSpeed);
-            transform.position = new Vector3(transform.position.x+(smoothSpeed*smoothAcc*Time.deltaTime), transform.position.y, transform.position.z);
+            transform.position = new Vector3(transform.position.x+(smoothSpeed*smoothAcc*Time.deltaTime), transform.position.y+(smoothSpeedY*smoothAcc*Time.deltaTime), transform.position.z);
         }
 
         /*if (Mathf.Abs(transform.position.x - target.position.x) >= thresholdX){

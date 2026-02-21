@@ -39,8 +39,10 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Ground Check")]
     [SerializeField] private Transform groundCheckPoint;
+    [SerializeField] private Transform LeverPullPoint;
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask leverLayer;
 
     [Header("References")]
     [SerializeField] private GameObject visual;
@@ -103,9 +105,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         bool grounded = IsGrounded();
+        bool isTouchingLever = IsTouchingLever();
+        Debug.Log(" Touching Lever: " + isTouchingLever);
 
          if (moveInput.x != 0)
         {
+            //if(moveInput.x > 0 && !progMan.HasUpgrade(PlayerAction.MoveRight)) moveInput.x = 0;
+            if(moveInput.x < 0 && !progMan.HasUpgrade(PlayerAction.MoveLeft)) moveInput.x = 0;
             // Accelerate
             rb.linearVelocity = new Vector2(
                 Mathf.MoveTowards(rb.linearVelocity.x, moveInput.x * moveSpeed, acceleration * Time.fixedDeltaTime),
@@ -210,9 +216,15 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapBox(groundCheckPoint.position, groundCheckSize, 0f, groundLayer);
     }
 
+    private bool IsTouchingLever()
+    {
+        return Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, leverLayer);
+    }
+
     // --- New Input System callbacks ---
     public void OnMove(InputAction.CallbackContext ctx)
     {
+        //Debug.Log("move input: " + ctx.phase);
         moveInput = ctx.ReadValue<Vector2>();
     }
 
@@ -265,8 +277,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnCrouch(InputAction.CallbackContext ctx)
     {
+        //Debug.Log("Crouch input: " + ctx.phase + "X pressed");
         //if(!keyMan.IsUnlocked(PlayerAction.Crouch)) return;
-        if(!progMan.HasUpgrade(PlayerAction.Crouch)) return;
+        //if(!progMan.HasUpgrade(PlayerAction.Crouch)) return;
         // Button-style action: pressed -> crouch, released -> stand.
         if (ctx.started || ctx.performed)
         {
@@ -276,6 +289,22 @@ public class PlayerMovement : MonoBehaviour
         {
             crouchHeld = false;
         }
+        
+    }
+
+    public void OnLeverPull(InputAction.CallbackContext ctx)
+    {
+        //Debug.Log("Crouch input: " + ctx.phase + "X pressed");
+        //if(!keyMan.IsUnlocked(PlayerAction.Crouch)) return;
+        //if(!progMan.HasUpgrade(PlayerAction.Crouch)) return;
+        // Button-style action: pressed -> crouch, released -> stand.
+        if(!IsTouchingLever())
+         {
+            return;
+        }
+        
+        
+        
     }
 
     private void CacheVisualCrouchData()
@@ -313,9 +342,11 @@ public class PlayerMovement : MonoBehaviour
         bool canCrouchNow = crouchHeld && grounded;
         // Smoothly move between standing and crouched.
         float target = canCrouchNow ? 1f : 0f;
+        //Debug.Log("Crouch"+ crouchHeld +" "+ grounded);
+        animator.SetBool("isCrouching", canCrouchNow);
         crouchFactor = Mathf.MoveTowards(crouchFactor, target, crouchTransitionSpeed * Time.deltaTime);
 
-        /*float yMult = Mathf.Lerp(1f, crouchScaleY, crouchFactor);
+        float yMult = Mathf.Lerp(1f, crouchScaleY, crouchFactor);
 
         Transform vt = visual.transform;
         vt.localScale = new Vector3(visualBaseLocalScale.x, visualBaseLocalScale.y * yMult, visualBaseLocalScale.z);
@@ -337,7 +368,7 @@ public class PlayerMovement : MonoBehaviour
         {
             // Fallback: if no renderer is found, at least preserve original position.
             vt.localPosition = visualBaseLocalPos;
-        }*/
+        }
     }
     /*private void SetAnimBool(string param, bool value)
     {

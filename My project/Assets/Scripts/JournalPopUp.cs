@@ -48,11 +48,15 @@ public class JournalPopUp : MonoBehaviour
 
     // --- 5. THE "ON COMMAND" FUNCTION ---
     // Call this from other scripts or buttons to add text
-    public void AddText(string newEntry)
+    /*public void AddText(string newEntry)
     {
+        Debug.Log("Adding to journal: " + newEntry); // Debug log to verify the function is called
         if (journalTextDisplay != null)
         {
+            
+            Debug.Log("happy nigga"); 
             journalTextDisplay.text += "\n" + "- " + newEntry;
+
         }
-    }
+    }*/
 }

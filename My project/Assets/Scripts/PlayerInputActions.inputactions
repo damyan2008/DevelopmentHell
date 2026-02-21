@@ -41,6 +41,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "e713ea9e-5d9b-42d3-87ed-b1266a4f7b47",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -67,20 +76,9 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "down",
+                    "name": "Left",
                     "id": "d335c342-9347-46b7-8958-e0aee3e860e5",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "91a3378d-184e-4e4e-80ff-730b89ad6658",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -91,7 +89,7 @@
                 {
                     "name": "right",
                     "id": "40f84593-b869-49b0-89f2-c56c6390ec9f",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/u",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -102,7 +100,7 @@
                 {
                     "name": "",
                     "id": "064104d4-935f-4af1-aa8a-eba4f893e57b",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/m",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -113,7 +111,7 @@
                 {
                     "name": "",
                     "id": "4d6273c2-d788-402e-9704-e4f11d53fb33",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -124,11 +122,22 @@
                 {
                     "name": "",
                     "id": "3b378e49-4969-4d67-88a7-7ff06cfc2360",
-                    "path": "<Keyboard>/h",
+                    "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Grab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c7131266-7f55-4443-9b71-5104a5164d41",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -152,7 +161,7 @@
                 {
                     "name": "",
                     "id": "2d67df9a-61a3-4fd7-8785-a85082955418",
-                    "path": "<Keyboard>/escape",
+                    "path": "<Keyboard>/8",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -180,7 +189,7 @@
                 {
                     "name": "",
                     "id": "9c8f5790-38d8-4a53-8266-a8cca7ac1dc7",
-                    "path": "<Keyboard>/p",
+                    "path": "<Keyboard>/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

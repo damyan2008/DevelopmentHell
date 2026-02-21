@@ -9,7 +9,10 @@ public enum PlayerAction
     Jump,
     Crouch,
     Grab,
-    Oven
+    Oven,
+    MoveLeft,
+    MoveRight
+    
 }
 
 public enum ItemId
