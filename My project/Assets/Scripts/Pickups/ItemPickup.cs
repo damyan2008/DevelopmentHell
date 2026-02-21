@@ -1,12 +1,14 @@
 // InventoryItemPickup.cs
 using UnityEngine;
+using TMPro;
 
-[RequireComponent(typeof(Collider2D))]
+//[RequireComponent(typeof(Collider2D))]
 public class InventoryItemPickup : MonoBehaviour
-{
+{/*
     [SerializeField] private ItemId item = ItemId.Rock;
     [SerializeField] private bool destroyOnPickup = true;
     [SerializeField] private bool requireEmptyHand = true;
+    
     private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;
@@ -19,7 +21,9 @@ public class InventoryItemPickup : MonoBehaviour
         var handler = ProgressionHandler.Instance;
         if (handler == null) return;
 
+        
+
         bool success = handler.SetHeldItem(item, requireEmptyHand);
         if (success && destroyOnPickup) Destroy(gameObject);
-    }
+    }*/
 }

@@ -8,9 +8,9 @@ public class PlayerMovement : MonoBehaviour
     
 
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 8f;
-    [SerializeField] private float acceleration = 20f;
-    [SerializeField] private float deceleration = 40f;
+    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private float acceleration = 10f;
+    [SerializeField] private float deceleration = 3f;
 
     [Header("Charged Jump")]
     [Tooltip("Minimum jump height (world units) when you tap/release quickly.")]
@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask leverLayer;
+    [SerializeField] private LayerMask buttonLayer;
 
     [Header("References")]
     [SerializeField] private GameObject visual;
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private string animMoveXFloat = "MoveX";
     [SerializeField] private string animVerticalSpeedFloat = "VerticalSpeed";
     [SerializeField] private string animCharge01Float = "JumpCharge01";
+    [SerializeField] private GameObject Spikes;
      public Rigidbody2D rb;
     private ProgressionHandler progMan;
 
@@ -106,7 +108,16 @@ public class PlayerMovement : MonoBehaviour
     {
         bool grounded = IsGrounded();
         bool isTouchingLever = IsTouchingLever();
-        Debug.Log(" Touching Lever: " + isTouchingLever);
+        //Debug.Log(" Touching Lever: " + isTouchingLever);
+
+
+        if (IsTouchingButton())
+        {
+            //Debug.Log(Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, buttonLayer));
+            Animator buttonAnimator = Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, buttonLayer).GetComponent<Animator>();
+            buttonAnimator.SetBool("is pressed", true);
+            Spikes.transform.position = new Vector3(Spikes.transform.position.x, 3.11f, Spikes.transform.position.z);
+        }
 
          if (moveInput.x != 0)
         {
@@ -221,6 +232,11 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, leverLayer);
     }
 
+    private bool IsTouchingButton()
+    {
+        return Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, buttonLayer);
+    }
+
     // --- New Input System callbacks ---
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -232,7 +248,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
         if(!progMan.HasUpgrade(PlayerAction.Jump)) return;
-
+        Debug.Log("Jump input: " + ctx.phase + "X pressed");
         // Hold begins
         if (ctx.started)
         {
@@ -303,7 +319,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
-        
+
         
     }
 

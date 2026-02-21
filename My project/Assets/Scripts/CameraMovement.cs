@@ -20,10 +20,11 @@ public class CameraMovement : MonoBehaviour
     {
         if (target == null) return;
         float smoothSpeedY = target.position.y-(transform.position.y-2);
+        float smoothSpeed = 0;
 
         if (Mathf.Abs(transform.position.x - target.position.x) >= thresholdX)
         {
-            float smoothSpeed = target.position.x-transform.position.x;
+            smoothSpeed = target.position.x-transform.position.x;
             if(smoothSpeed>0){
                 smoothSpeed-= thresholdX;
             }else{
@@ -38,8 +39,9 @@ public class CameraMovement : MonoBehaviour
             }*/
             
             //float newX = Mathf.Lerp(transform.position.x, target.position.x, smoothSpeed);
-            transform.position = new Vector3(transform.position.x+(smoothSpeed*smoothAcc*Time.deltaTime), transform.position.y+(smoothSpeedY*smoothAcc*Time.deltaTime), transform.position.z);
+            
         }
+        transform.position = new Vector3(transform.position.x+(smoothSpeed*smoothAcc*Time.deltaTime), transform.position.y+(smoothSpeedY*smoothAcc*Time.deltaTime), transform.position.z);
 
         /*if (Mathf.Abs(transform.position.x - target.position.x) >= thresholdX){
             Vector3 targetPosition = new Vector3(

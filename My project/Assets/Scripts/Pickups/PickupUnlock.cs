@@ -1,6 +1,7 @@
 // UpgradePickup.cs
 using TMPro;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(Collider2D))]
 public class UpgradePickup : MonoBehaviour
@@ -37,6 +38,24 @@ public class UpgradePickup : MonoBehaviour
             Debug.LogError("No ProgressionHandler in scene.");
             return;
         }
+
+        //if(other.gameObject.layer == LayerMask.NameToLayer("journal"))
+        //{
+        //    if(other == null)
+        //{
+       //     return;
+       // }
+       // if(journalPanel == null)
+       // {
+       //     return;
+       // }
+       // if(journalTextDisplay == null)
+       // {
+       //     return;
+       // }
+           // journalPanel.SetActive(true);
+           // journalTextDisplay.text += "Use M to jump!";
+        //}
 
         bool newlyUnlocked = handler.UnlockUpgrade(upgrade);
 
