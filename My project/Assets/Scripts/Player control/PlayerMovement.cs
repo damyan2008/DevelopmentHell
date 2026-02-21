@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private LayerMask leverLayer;
+    [SerializeField] private LayerMask buttonLayer;
 
     [Header("References")]
     [SerializeField] private GameObject visual;
@@ -107,6 +108,13 @@ public class PlayerMovement : MonoBehaviour
         bool grounded = IsGrounded();
         bool isTouchingLever = IsTouchingLever();
         Debug.Log(" Touching Lever: " + isTouchingLever);
+
+        if (IsTouchingButton())
+        {
+            Debug.Log(Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, buttonLayer));
+            Animator buttonAnimator = Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, buttonLayer).GetComponent<Animator>();
+            buttonAnimator.SetBool("is pressed", true);
+        }
 
          if (moveInput.x != 0)
         {
@@ -221,6 +229,11 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, leverLayer);
     }
 
+    private bool IsTouchingButton()
+    {
+        return Physics2D.OverlapBox(LeverPullPoint.position, groundCheckSize, 0f, buttonLayer);
+    }
+
     // --- New Input System callbacks ---
     public void OnMove(InputAction.CallbackContext ctx)
     {
@@ -303,7 +316,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         
-        
+
         
     }
 
