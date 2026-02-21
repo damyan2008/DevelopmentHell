@@ -1,4 +1,5 @@
 // UpgradePickup.cs
+using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -7,7 +8,7 @@ public class UpgradePickup : MonoBehaviour
     [SerializeField] private PlayerAction upgrade = PlayerAction.Jump;
     [SerializeField] private bool destroyOnPickup = true;
 
-    //[SerializeField] private JournalPopUp journalPopUp;
+    public TextMeshProUGUI journalTextDisplay;
 
     private void Reset()
     {
@@ -17,9 +18,18 @@ public class UpgradePickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-    
 
-        //journalPopUp.AddText(@"The internal connection to the right track movement is binded to 'D';");
+
+        if (upgrade == PlayerAction.MoveLeft)
+        {
+
+            journalTextDisplay.text += "\n" + "- " + @"The internal connection to the right track movement is binded to 'D'...:D";
+        }
+        else
+        {
+            journalTextDisplay.text += "\n" + @"M - jump";
+        }
+        //Debug.Log("NESTO");
 
         var handler = ProgressionHandler.Instance;
         if (handler == null)
