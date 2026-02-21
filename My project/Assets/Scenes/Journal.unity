@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Write discovered keybindings here...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4e5fbe54eae875f489463fa83e70c549, type: 2}
   m_sharedMaterial: {fileID: 3564550884412324235, guid: 4e5fbe54eae875f489463fa83e70c549, type: 2}
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JournalPopUp
   journalPanel: {fileID: 1401378173}
-  journalTextDisplay: {fileID: 0}
+  journalTextDisplay: {fileID: 1554010473}
   playerInput: {fileID: 0}
 --- !u!114 &1401378176
 MonoBehaviour:
