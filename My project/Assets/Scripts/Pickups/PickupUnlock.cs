@@ -27,7 +27,7 @@ public class UpgradePickup : MonoBehaviour
         }
         else
         {
-            journalTextDisplay.text += "\n" + @"M - jump";
+            journalTextDisplay.text += "\n" + @"M - jump (hold for a while)";
         }
         //Debug.Log("NESTO");
 
