@@ -1,6 +1,6 @@
 // UpgradePickup.cs
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class UpgradePickup : MonoBehaviour
@@ -8,10 +8,7 @@ public class UpgradePickup : MonoBehaviour
     [SerializeField] private PlayerAction upgrade = PlayerAction.Jump;
     [SerializeField] private bool destroyOnPickup = true;
 
-   // [SerializeField] private TextMeshProUGUI journalTextDisplay;
-   // [SerializeField] private GameObject journalPanel;
-
-    //[SerializeField] private JournalPopUp journalPopUp;
+    public TextMeshProUGUI journalTextDisplay;
 
     private void Reset()
     {
@@ -21,9 +18,22 @@ public class UpgradePickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;
-    
 
-        //journalPopUp.AddText(@"The internal connection to the right track movement is binded to 'D';");
+
+        if (upgrade == PlayerAction.MoveLeft)
+        {
+
+            journalTextDisplay.text += "\n" + "- " + @"The internal connection to the right track movement is binded to 'D'...:D";
+        }
+        else if (upgrade == PlayerAction.Oven)
+        {
+             journalTextDisplay.text += "\n" + @"Good job, you are the best chicken making robot!! That is mayby why they thied to kill you.";
+        }
+        else if (upgrade == PlayerAction.Jump)
+        {
+            journalTextDisplay.text += "\n" + @"M - jump (hold for a while)";
+        }
+        //Debug.Log("NESTO");
 
         var handler = ProgressionHandler.Instance;
         if (handler == null)
@@ -31,24 +41,6 @@ public class UpgradePickup : MonoBehaviour
             Debug.LogError("No ProgressionHandler in scene.");
             return;
         }
-
-        //if(other.gameObject.layer == LayerMask.NameToLayer("journal"))
-        //{
-        //    if(other == null)
-        //{
-       //     return;
-       // }
-       // if(journalPanel == null)
-       // {
-       //     return;
-       // }
-       // if(journalTextDisplay == null)
-       // {
-       //     return;
-       // }
-           // journalPanel.SetActive(true);
-           // journalTextDisplay.text += "Use M to jump!";
-        //}
 
         bool newlyUnlocked = handler.UnlockUpgrade(upgrade);
 
