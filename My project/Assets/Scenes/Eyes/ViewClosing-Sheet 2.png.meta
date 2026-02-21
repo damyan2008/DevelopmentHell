@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: edea1f76c1cad5a4ba1886b60fee282d
+guid: 224ac9b36de7b5744b232aa04d21409c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7613631042595984317
-    second: ViewClosing-Sheet 1_0
+      213: -8513739190003892079
+    second: ViewClosing-Sheet_0
   - first:
-      213: -8117667717614722362
-    second: ViewClosing-Sheet 1_1
+      213: 2313520765174821710
+    second: ViewClosing-Sheet_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -78,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,10 +129,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e14fafb4e19ab5c4a9bbeb86dc235808
-      internalID: 1137468279
+      spriteID: 1900f7d705f19d980800000000000000
+      internalID: -8513739190003892079
       vertices: []
       indices: 
       edges: []
@@ -151,10 +151,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 41ac5d74908327044806ba0c79eaae0f
-      internalID: -925163554
+      spriteID: e433cbcd0e64b1020800000000000000
+      internalID: 2313520765174821710
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7abbd87f6d65a264dade6cf119b4d179
-      internalID: -617406587
+      spriteID: da6bf5c1f21806d4589d7917ed945c28
+      internalID: -679254799
       vertices: []
       indices: 
       edges: []
@@ -197,8 +197,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6da66d7b04fe324ebb6ab70d59fa71c
-      internalID: -81046420
+      spriteID: 1c8c2fe67f99b9c4683a27f8933c2c91
+      internalID: 1053819997
       vertices: []
       indices: 
       edges: []
@@ -219,8 +219,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca9990946d0fc7347841856bad9c2388
-      internalID: -1509686277
+      spriteID: 8d3122e3f53d26746b6507d8d210984c
+      internalID: 592540740
       vertices: []
       indices: 
       edges: []
@@ -241,8 +241,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5beb0c60bcc7dda4fb9c55b3e8a1fcf7
-      internalID: -962872793
+      spriteID: c3f84191261121541abad527a951be2d
+      internalID: 953476305
       vertices: []
       indices: 
       edges: []
@@ -251,7 +251,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a77b0bd5b4955ce46bf4dfafd7cf6cbc
+    spriteID: 3712d0e47b098c14da2ca7f91f4d6658
     internalID: 0
     vertices: []
     indices: 
@@ -263,12 +263,12 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":3.0,"y":2.0},"gridSpriteSize":{"x":200.0,"y":100.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      ViewClosing-Sheet_0: 1137468279
-      ViewClosing-Sheet_1: -925163554
-      ViewClosing-Sheet_2: -617406587
-      ViewClosing-Sheet_3: -81046420
-      ViewClosing-Sheet_4: -1509686277
-      ViewClosing-Sheet_5: -962872793
+      ViewClosing-Sheet_0: -8513739190003892079
+      ViewClosing-Sheet_1: 2313520765174821710
+      ViewClosing-Sheet_2: -679254799
+      ViewClosing-Sheet_3: 1053819997
+      ViewClosing-Sheet_4: 592540740
+      ViewClosing-Sheet_5: 953476305
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
