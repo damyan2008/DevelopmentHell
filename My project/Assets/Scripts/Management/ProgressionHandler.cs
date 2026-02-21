@@ -11,7 +11,8 @@ public enum PlayerAction
     Grab,
     Oven,
     MoveLeft,
-    MoveRight
+    MoveRight,
+    Journal
     
 }
 
